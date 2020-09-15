@@ -1,14 +1,24 @@
 # Snek
 
-A very simple environment variable-based config management system, focused on container/kubernetes use cases. Very small fangs.
+A very simple Go environment variable-based config management system, designed for docker/kubernetes use cases. Very small fangs.
 
 ## Why?
 
-Viper is powerful, but its complicated. Like many developers, I find myself working in a Docker/Kubernetes world more often than not. So, who needs config files? I just want envinroment variables and/or a ConfigMap. This simplifies config management from within my app - all I really need is to look for my config values in environment variables, and to use a default value if the environment variable isn't set. Fin.
+Go has some great config management tools, like [Viper](https://github.com/spf13/viper) - powerful, but complex. Managing precedence between config sources, many file formats, aliases - sometimes you need something simpler. 
 
-I'm tired of writing this (admitttedly simple) logic into every app, so here we are :)
+Like many developers, I find myself working in a Docker/Kubernetes world more often than not. So, who needs config files? I just want environment variables and/or a [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/). This simplifies config management from within my app - all I really need is something that looks for my config values in environment variables, and allows me to set default values in case the environment variables aren't set. Fin.
+
+I'm tired of writing this (admitttedly simple) logic into each of my apps, so here we are. :)
 
 ## Usage
+
+Start by importing the library:
+
+```go
+import (
+	"github.com/cacois/snek"
+)
+```
 
 Snek is really simple. You can do two things. First, if you want to, you can set default values for a particular configuration parameter:
 
@@ -16,10 +26,10 @@ Snek is really simple. You can do two things. First, if you want to, you can set
 snek.Default("MY_ENV_VAR", "mydefaultvalue")
 ```
 
-I tend to put a big list of these in a file called `config.go`, because 1) its extremely convenient to be able to see the entire application config in a single place, and 2) I like to have default values for all config parameters - its handy for running the app in a default development mode:
+I tend to put a big list of these in a file called `config.go`, because 1) its extremely convenient to be able to see the entire application config in a single place, and 2) I like to have default values for all config parameters - its handy when running the app in a default development mode:
 
 config.go:
-```go 
+```go
 package main
 
 func init() {
