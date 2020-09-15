@@ -7,20 +7,18 @@
 
 ## Why?
 
-Go has some great config management tools, like [Viper](https://github.com/spf13/viper) - powerful, but complex. Managing precedence between config sources, many file formats, aliases - sometimes you need something simpler. 
+Go alreayd has some great config management tools, like [Viper](https://github.com/spf13/viper) - which is powerful, but complex. Managing precedence between config sources, many file formats, aliases...sometimes your needs are simpler. 
 
-Like many developers, I find myself working in a Docker/Kubernetes world more often than not. So, who needs config files? I just want environment variables and/or a [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/). This simplifies config management from within my app - all I really need is something that looks for my config values in environment variables, and allows me to set default values in case the environment variables aren't set. Fin.
+Like many developers, I find myself working in a Docker/Kubernetes world more often than not. So, who needs config files? All I need is environment variables and/or a [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/). This simplifies config management from within my app - all I really need is something that looks for my config values in environment variables, and allows me to set default values in case the environment variables aren't set. Fin.
 
 I'm tired of writing this (admitttedly simple) logic into each of my apps, so here we are. :)
 
 ## Usage
 
-Start by importing the library:
+Start by importing the module:
 
-```go
-import (
-	"github.com/cacois/snek"
-)
+```bash
+$ go get "github.com/cacois/snek"
 ```
 
 Snek is really simple. You can do two things. First, if you want to, you can set default values for a particular configuration parameter:
