@@ -1,6 +1,8 @@
 # Snek
 
-A very simple Go environment variable-based config management system, designed for docker/kubernetes use cases. Very small fangs.
+[![cacois](https://circleci.com/gh/cacois/snek.svg?style=svg)](https://app.circleci.com/pipelines/github/cacois/snek)
+
+**Snek** is a very simple Go environment variable-based config management system, designed for docker/kubernetes use cases. Very small fangs.
 
 ## Why?
 
