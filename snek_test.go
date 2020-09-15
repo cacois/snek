@@ -14,7 +14,7 @@ func TestSnekDefault(t *testing.T) {
 	// Get value, make sure default is returned
 	v := Get(envVar)
 	if v != value {
-		t.Error("Default() failed to store and retreive default value")
+		t.Error("Default() failed to store and retrieve default value")
 	}
 }
 
