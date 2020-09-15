@@ -1,8 +1,4 @@
 test:
-  override:
-    - go test
-
-test:
   pre:
     - go get github.com/mattn/goveralls
   override:
