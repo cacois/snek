@@ -2,6 +2,8 @@
 
 [![cacois](https://circleci.com/gh/cacois/snek.svg?style=svg)](https://app.circleci.com/pipelines/github/cacois/snek)
 
+[![Coverage Status](https://coveralls.io/repos/github/cacois/snek/badge.svg?branch=master)](https://coveralls.io/github/cacois/snek?branch=master)
+
 **Snek** is a very simple Go environment variable-based config management system, designed for docker/kubernetes use cases. Very small fangs.
 
 ## Why?
