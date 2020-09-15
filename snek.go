@@ -42,7 +42,7 @@ func GetOrError(envvar string) (string, error) {
 	defaultVal, present := defaults[envvar]
 	if present {
 		return defaultVal, nil
-	} else {
-		return "", fmt.Errorf("Config key %s not set, either as environment variable or default value", envvar)
 	}
+
+	return "", fmt.Errorf("Config key %s not set, either as environment variable or default value", envvar)
 }
