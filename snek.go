@@ -1,3 +1,4 @@
+// Package snek is the primary package for the snek application configuration manager
 package snek
 
 import (
