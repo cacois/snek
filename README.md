@@ -4,6 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/cacois/snek/badge.svg?branch=master)](https://coveralls.io/github/cacois/snek?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/cacois/snek?style=flat-square)](https://goreportcard.com/report/github.com/cacois/snek)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=green&style=flat-square)](https://pkg.go.dev/mod/github.com/cacois/snek)
+
 
 **Snek** is a very simple environment variable-based application config management system, for the Go programming language. Snek is designed for docker/kubernetes use cases. Very small fangs.
 
